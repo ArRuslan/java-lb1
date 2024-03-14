@@ -1,0 +1,6 @@
+(?x)
+^
+(java\.(util|math)\.\S+)
+|
+(java\.lang\.(Byte|Short|Integer|Long|Character|Float|Double))
+$

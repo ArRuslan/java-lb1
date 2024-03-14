@@ -1,0 +1,6 @@
+ua.nure.jfm.task1.Demo
+ua.nure.jfm.task1.Part1
+ua.nure.jfm.task1.Part2
+ua.nure.jfm.task1.Part3
+ua.nure.jfm.task1.Part4
+ua.nure.jfm.task1.Part5
