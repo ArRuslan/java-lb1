@@ -4,16 +4,18 @@ public class Part2 {
 	
 	public static void main(String[] args) {
 		int[] ints = new int[args.length];
-		for(int i = 0; i < args.length; i++)
+		for(int i = 0; i < args.length; i++) {
 			ints[i] = parseInt(args[i]);
+		}
 
 		int gcd = ints[0];
-		for(int i = 1; i < args.length; i++)
+		for(int i = 1; i < args.length; i++) {
 			gcd = calcGcd(gcd, ints[i]);
-
+		}
 		int lcm = ints.length > 1 ? calcLcm(ints[0], ints[1]) : ints[0];
-		for(int i = 2; i < args.length; i++)
+		for(int i = 2; i < args.length; i++) {
 			lcm = calcLcm(lcm, ints[i]);
+		}
 
 		System.out.printf("%d %d", gcd, lcm);
 	}

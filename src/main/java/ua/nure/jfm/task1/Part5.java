@@ -5,8 +5,9 @@ public class Part5 {
     public static void main(String[] args) {
         args = new String[] { "1", "5", "3", "0", "5", "2", "1" };
         int[] ints = new int[args.length];
-        for(int i = 0; i < args.length; i++)
+        for(int i = 0; i < args.length; i++) {
             ints[i] = parseInt(args[i]);
+        }
 
         for(int i : sequence(ints)) {
             System.out.print(i+" ");
@@ -14,28 +15,30 @@ public class Part5 {
     }
 
     public static int[] sequence(int[] ar) {
-        if (ar == null)
+        if (ar == null) {
             return null;
+        }
 
         int[] tmp = new int[ar.length];
-        int res_idx = 0;
-        boolean seq_start = true;
+        int resIdx = 0;
+        boolean seqStart = true;
 
         for (int i = 1; i < ar.length; i++) {
             if (ar[i] < ar[i - 1]) {
-                if (seq_start || tmp[res_idx - 1] != ar[i - 1]) {
-                    seq_start = false;
-                    tmp[res_idx++] = ar[i - 1];
+                if (seqStart || tmp[resIdx - 1] != ar[i - 1]) {
+                    seqStart = false;
+                    tmp[resIdx++] = ar[i - 1];
                 }
-                tmp[res_idx++] = ar[i];
+                tmp[resIdx++] = ar[i];
             } else {
-                seq_start = true;
+                seqStart = true;
             }
         }
 
-        int[] result = new int[res_idx];
-        for (int i = 0; i < result.length; i++)
+        int[] result = new int[resIdx];
+        for (int i = 0; i < result.length; i++) {
             result[i] = tmp[i];
+        }
 
         return result;
     }

@@ -10,18 +10,20 @@ public class Part1 {
 
         for(String arg : args) {
             for(char ch : arg.toCharArray()) {
-                if(ch >= '0' && ch <= '9') {
+                if(ch >= '0' & ch <= '9') {
                     digitSum += parseInt(ch);
                     lastNumber += ch;
                 } else {
-                    if(lastNumber.isEmpty())
+                    if(lastNumber.isEmpty()) {
                         continue;
+                    }
                     numberSum += parseInt(lastNumber);
                     lastNumber = "";
                 }
             }
-            if(!lastNumber.isEmpty())
+            if(!lastNumber.isEmpty()) {
                 numberSum += parseInt(lastNumber);
+            }
             lastNumber = "";
         }
 
